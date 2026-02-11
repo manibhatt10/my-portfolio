@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manorath Bhatt | Engineering Student</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="text-2xl font-bold text-gray-900 tracking-tight">
+                        Manorath<span class="text-blue-600">.np</span>
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="btn-primary">Contact Me</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 focus:outline-none hover:text-blue-600 transition">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">About</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Skills</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-600 hover:bg-gray-50">Projects</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 font-semibold hover:bg-blue-50">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative pt-20 pb-32 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center">
+            <div class="w-full md:w-1/2 mt-12 md:mt-0 text-center md:text-left">
+                <span class="inline-block py-1 px-3 rounded-full bg-blue-100 text-blue-700 text-sm font-semibold mb-4">
+                    👋 Namaste, I am
+                </span>
+                <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-gray-900">
+                    Manorath <span class="gradient-text">Bhatt</span>
+                </h1>
+                <h2 class="text-xl md:text-2xl text-gray-600 mb-6">
+                    Electronics & Info Engineering Student
+                </h2>
+                <p class="text-gray-500 text-lg mb-8 leading-relaxed max-w-lg mx-auto md:mx-0">
+                    Final year student at <strong>Pulchowk Campus</strong>. Building with <strong>Django</strong>, thinking in <strong>German</strong>, and exploring the Global Economy.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#contact" class="px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition shadow-lg hover:shadow-blue-500/30">
+                        Get in Touch
+                    </a>
+                    <a href="https://github.com/" target="_blank" class="px-8 py-3 bg-gray-800 text-white font-medium rounded-lg hover:bg-gray-900 transition shadow-lg flex items-center justify-center gap-2">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                </div>
+            </div>
+            
+            <div class="w-full md:w-1/2 flex justify-center">
+                <div class="relative">
+                    <div class="absolute inset-0 bg-blue-600 blur-3xl opacity-20 rounded-full"></div>
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Mani&backgroundColor=c0aede" 
+                         alt="Manorath Bhatt" 
+                         class="relative w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-white shadow-2xl hover:scale-105 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="bg-gray-50 rounded-2xl p-8 md:p-12 shadow-sm border border-gray-100">
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    I am currently in my <strong>8th (Final) Semester</strong> of Bachelor's in Electronics, Communication, and Information Engineering at IOE, Pulchowk Campus.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                    My technical focus is on <strong>Backend Development</strong> using the Django Framework. I am also learning German (High A1 Level) to broaden my global opportunities.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    When not coding, I practice the <strong>PAO Memory System</strong> for cards and study macroeconomics. I am vegan, disciplined, and currently running a personal NoFap challenge for self-mastery.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16">Technical Arsenal</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="skill-card">
+                    <i class="fab fa-python text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="font-semibold text-gray-900">Python</h3>
+                    <p class="text-sm text-gray-500">Core Language</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-server text-4xl text-green-600 mb-4"></i>
+                    <h3 class="font-semibold text-gray-900">Django</h3>
+                    <p class="text-sm text-gray-500">Backend Systems</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-language text-4xl text-red-500 mb-4"></i>
+                    <h3 class="font-semibold text-gray-900">German</h3>
+                    <p class="text-sm text-gray-500">Level A1 (High)</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-microchip text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="font-semibold text-gray-900">Electronics</h3>
+                    <p class="text-sm text-gray-500">Circuit Design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-16">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="project-card group">
+                    <div class="h-48 bg-blue-600 flex items-center justify-center">
+                        <i class="fas fa-language text-6xl text-white opacity-80 group-hover:scale-110 transition duration-300"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-2">Nepali LLM Dataset</h3>
+                        <p class="text-gray-600 mb-4">
+                            Creating a simplified Nepali sentence pair dataset for training Large Language Models.
+                        </p>
+                        <div class="flex gap-2 mb-6">
+                            <span class="tag bg-blue-100 text-blue-600">NLP</span>
+                            <span class="tag bg-green-100 text-green-600">Python</span>
+                        </div>
+                        <a href="#" class="text-blue-600 font-semibold hover:underline">View on GitHub &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="project-card group">
+                    <div class="h-48 bg-gray-800 flex items-center justify-center">
+                        <i class="fas fa-brain text-6xl text-white opacity-80 group-hover:scale-110 transition duration-300"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-2">PAO Memory System</h3>
+                        <p class="text-gray-600 mb-4">
+                            A cognitive tool to memorize decks of cards using the Person-Action-Object method.
+                        </p>
+                        <div class="flex gap-2 mb-6">
+                            <span class="tag bg-purple-100 text-purple-600">Cognitive Sci</span>
+                            <span class="tag bg-yellow-100 text-yellow-600">Memory</span>
+                        </div>
+                        <a href="#" class="text-blue-600 font-semibold hover:underline">Read Blog &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-gray-900 text-white py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-2xl font-bold mb-6">Let's Connect</h2>
+            <p class="text-gray-400 mb-8 max-w-lg mx-auto">
+                Reach out to discuss Django, Electronics, or the future of tech in Nepal.
+            </p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="mailto:contact@manorath-bhatt.com.np" class="social-icon"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="text-gray-500 text-sm">
+                &copy; 2026 Manorath Bhatt. Built with Tailwind CSS.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3b82f6; /* Blue-500 */
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #2563eb; /* Blue-600 */
+}
+
+/* Gradient Text Effect */
+.gradient-text {
+    background: linear-gradient(to right, #2563eb, #9333ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Reusable Components to clean up HTML */
+.nav-link {
+    @apply text-gray-600 hover:text-blue-600 transition; /* Note: @apply only works in build tools. For CDN, use standard CSS or utility classes in HTML. */
+    color: #4b5563;
+    transition: color 0.3s;
+    text-decoration: none;
+}
+.nav-link:hover {
+    color: #2563eb;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    transition: background-color 0.3s;
+}
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.skill-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 0.75rem;
+    text-align: center;
+    border: 1px solid #f3f4f6;
+    transition: box-shadow 0.3s;
+}
+.skill-card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.tag {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #9ca3af;
+    transition: color 0.3s;
+}
+.social-icon:hover {
+    color: white;
+}
