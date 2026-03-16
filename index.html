@@ -32,7 +32,7 @@
     class="bg-gray-50 dark:bg-black text-gray-800 dark:text-gray-200 font-sans antialiased transition-colors duration-300">
 
     <nav id="navbar"
-        class="group sticky top-0 z-50 bg-white/80 dark:bg-black backdrop-blur-md shadow-sm transition-colors duration-300 [&.is-scrolled]:bg-blue-600 [&.is-scrolled]:dark:bg-black">
+        class="group sticky top-0 z-50 bg-white/60 dark:bg-black/50 backdrop-blur-xl backdrop-saturate-150 shadow-sm transition-all duration-300 [&.is-scrolled]:bg-[#2563EB] [&.is-scrolled]:dark:bg-black/70 border-b border-transparent dark:border-gray-800/50">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex-shrink-0 flex items-center">
@@ -60,9 +60,9 @@
                 <div class="flex items-center space-x-2 md:space-x-4">
                     <!-- Dark mode toggle -->
                     <button id="theme-toggle" type="button"
-                        class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 group-[.is-scrolled]:text-white group-[.is-scrolled]:hover:bg-blue-700 transition-colors">
-                        <i id="theme-toggle-dark-icon" class="hidden fas fa-moon text-lg"></i>
-                        <i id="theme-toggle-light-icon" class="hidden fas fa-sun text-lg"></i>
+                        class="relative w-10 h-10 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg group-[.is-scrolled]:text-white group-[.is-scrolled]:hover:bg-blue-700 transition-colors overflow-hidden">
+                        <i id="theme-toggle-dark-icon" class="fas fa-moon text-lg absolute transition-all duration-500 transform dark:-rotate-90 dark:scale-0 dark:opacity-0"></i>
+                        <i id="theme-toggle-light-icon" class="fas fa-sun text-lg absolute transition-all duration-500 transform rotate-90 scale-0 opacity-0 dark:rotate-0 dark:scale-100 dark:opacity-100"></i>
                     </button>
 
                     <div class="md:hidden flex items-center">
@@ -331,35 +331,40 @@
     <section id="education" class="py-20 bg-white dark:bg-black">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center mb-16 dark:text-white" data-aos="fade-up">Education</h2>
-            <div class="space-y-6">
+            <div class="relative border-l-2 border-blue-200 dark:border-blue-900 ml-4 md:ml-6 space-y-12 pb-4">
                 <!-- University -->
-                <div data-aos="fade-left" data-aos-delay="100"
-                    class="bg-white dark:bg-black rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:shadow-md transition">
-                    <div
-                        class="flex-shrink-0 w-20 h-20 rounded-full border border-red-100 p-2 flex items-center justify-center bg-white shadow-sm overflow-hidden">
-                        <img src="tu.jpg" alt="TU Logo" class="object-cover w-full h-full rounded-full drop-shadow-sm">
-                    </div>
-                    <div class="text-center sm:text-left flex-1 flex flex-col justify-center h-full sm:py-2">
-                        <h3 class="text-[1.15rem] font-bold text-black-400 dark:text-white">Bachelor's in Electronics,
-                            Communication &
-                            Information Engineering</h3>
-                        <p class="text-[0.95rem] text-blue-400 mt-1 font-medium">Pulchowk Campus, IOE <span
-                                class="text-gray-500 font-normal ml-1">(2022-2026)</span></p>
+                <div class="relative pl-8 md:pl-12" data-aos="fade-up" data-aos-delay="100">
+                    <!-- Timeline Dot -->
+                    <div class="absolute -left-[9px] top-8 w-4 h-4 bg-blue-600 rounded-full ring-4 ring-white dark:ring-black"></div>
+                    
+                    <div class="bg-white dark:bg-black rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:shadow-md transition">
+                        <div class="flex-shrink-0 w-20 h-20 rounded-full border border-red-100 p-2 flex items-center justify-center bg-white shadow-sm overflow-hidden">
+                            <img src="tu.jpg" alt="TU Logo" class="object-cover w-full h-full rounded-full drop-shadow-sm">
+                        </div>
+                        <div class="text-center sm:text-left flex-1 flex flex-col justify-center h-full sm:py-2">
+                            <h3 class="text-[1.15rem] font-bold text-black-400 dark:text-white">Bachelor's in Electronics,
+                                Communication &
+                                Information Engineering</h3>
+                            <p class="text-[0.95rem] text-blue-600 dark:text-blue-400 mt-1 font-medium">Pulchowk Campus, IOE <span
+                                    class="text-gray-500 font-normal ml-2 pl-2 border-l border-gray-300 dark:border-gray-700">2022 - 2026</span></p>
+                        </div>
                     </div>
                 </div>
 
                 <!-- High School -->
-                <div data-aos="fade-right" data-aos-delay="200"
-                    class="bg-white dark:bg-black rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:shadow-md transition">
-                    <div
-                        class="flex-shrink-0 w-20 h-20 rounded-full border border-blue-100 p-2 flex items-center justify-center bg-white shadow-sm overflow-hidden">
-                        <img src="radiantss.png" alt="Radiant SS Logo"
-                            class="object-cover w-full h-full rounded-full drop-shadow-sm">
-                    </div>
-                    <div class="text-center sm:text-left flex-1 flex flex-col justify-center h-full sm:py-2">
-                        <h3 class="text-[1.15rem] font-bold text-gray-800 dark:text-white">Intermediate in Science</h3>
-                        <p class="text-[0.95rem] text-blue-400 mt-1 font-medium">Radiant Secondary School <span
-                                class="text-gray-500 font-normal ml-1">(2019-2021)</span></p>
+                <div class="relative pl-8 md:pl-12" data-aos="fade-up" data-aos-delay="200">
+                    <!-- Timeline Dot -->
+                    <div class="absolute -left-[9px] top-8 w-4 h-4 bg-blue-400 rounded-full ring-4 ring-white dark:ring-black"></div>
+                    
+                    <div class="bg-white dark:bg-black rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 flex flex-col sm:flex-row items-center sm:items-start gap-6 hover:shadow-md transition">
+                        <div class="flex-shrink-0 w-20 h-20 rounded-full border border-blue-100 p-2 flex items-center justify-center bg-white shadow-sm overflow-hidden">
+                            <img src="radiantss.png" alt="Radiant SS Logo" class="object-cover w-full h-full rounded-full drop-shadow-sm">
+                        </div>
+                        <div class="text-center sm:text-left flex-1 flex flex-col justify-center h-full sm:py-2">
+                            <h3 class="text-[1.15rem] font-bold text-gray-800 dark:text-white">Intermediate in Science</h3>
+                            <p class="text-[0.95rem] text-blue-600 dark:text-blue-400 mt-1 font-medium">Radiant Secondary School <span
+                                    class="text-gray-500 font-normal ml-2 pl-2 border-l border-gray-300 dark:border-gray-700">2019 - 2021</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
