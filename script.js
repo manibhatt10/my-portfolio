@@ -74,10 +74,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // --- Scroll to Top Button ---
+    // --- Scroll to Top & Progress Ring ---
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-    if (scrollToTopBtn) {
+    const progressRing = document.getElementById('scroll-progress-ring');
+    
+    if (scrollToTopBtn && progressRing) {
+        // Circumference of a circle with r=44 is approx 276.46
+        const circumference = 276.46;
+
         window.addEventListener('scroll', () => {
+            // Visibility
             if (window.scrollY > 300) {
                 scrollToTopBtn.classList.remove('opacity-0', 'invisible');
                 scrollToTopBtn.classList.add('opacity-100', 'visible');
@@ -85,6 +91,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 scrollToTopBtn.classList.add('opacity-0', 'invisible');
                 scrollToTopBtn.classList.remove('opacity-100', 'visible');
             }
+
+            // Calculate progress
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercentage = Math.max(0, Math.min(1, window.scrollY / scrollHeight));
+            const dashOffset = circumference - (scrollPercentage * circumference);
+            
+            progressRing.style.strokeDashoffset = dashOffset;
         });
 
         scrollToTopBtn.addEventListener('click', () => {
