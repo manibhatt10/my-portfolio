@@ -101,9 +101,12 @@
                 <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-4 text-gray-900 dark:text-white">
                     Manorath <span class="text-gray-900 dark:text-white">Bhatt</span>
                 </h1>
-                <h2 class="text-xl md:text-2xl text-gray-600 mb-6">
-                    Electronics, Communication & Information Engineering Student
-                </h2>
+                <!-- Container with min-height to prevent layout jumping when text is typing -->
+                <div class="h-16 md:h-10 mb-6 flex items-center justify-center md:justify-start">
+                    <h2 class="text-xl md:text-2xl text-gray-600">
+                        <span id="typed-text"></span>
+                    </h2>
+                </div>
                 <p class="text-blue-400 text-lg mb-8 leading-relaxed max-w-lg mx-auto md:mx-0">
                     <a href="https://pcampus.edu.np/" target="_blank">Pulchowk Campus, Lalitpur, Nepal</a>
                 </p>
@@ -523,6 +526,7 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <!-- Scroll to Top Button -->
     <button id="scrollToTopBtn"
         class="fixed bottom-8 right-8 bg-blue-600 hover:bg-blue-700 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-all duration-300 opacity-0 invisible z-50 focus:outline-none focus:ring-2 focus:ring-blue-400 dark:bg-blue-500 dark:hover:bg-blue-600">

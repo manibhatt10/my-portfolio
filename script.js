@@ -115,6 +115,25 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // --- Initialize Typed.js ---
+    if (typeof Typed !== 'undefined' && document.getElementById('typed-text')) {
+        new Typed('#typed-text', {
+            strings: [
+                'Electronics, Communication &amp; Information Engineering Student.',
+                'Aspiring Backend Developer.',
+                'AI/NLP Enthusiast.'
+            ],
+            typeSpeed: 50,
+            backSpeed: 30,
+            backDelay: 1500,
+            smartBackspace: false, // Force complete backspacing
+            loop: true,
+            showCursor: true,
+            cursorChar: '|',
+            contentType: 'html' // ensures HTML entities like &amp; are rendered correctly
+        });
+    }
+
     // --- Scrollspy ---
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
