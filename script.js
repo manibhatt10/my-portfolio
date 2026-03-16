@@ -111,35 +111,36 @@ document.addEventListener('DOMContentLoaded', function () {
     const navLinks = document.querySelectorAll('.nav-link');
     const mobileNavLinks = document.querySelectorAll('#mobile-menu a');
 
-    const observerOptions = {
-        root: null,
-        rootMargin: '-20% 0px -60% 0px',
-        threshold: 0
-    };
-
-    const scrollSpyObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const id = entry.target.id;
-                
-                navLinks.forEach(link => {
-                    link.classList.remove('active');
-                    if (link.getAttribute('href') === `#${id}`) {
-                        link.classList.add('active');
-                    }
-                });
-
-                mobileNavLinks.forEach(link => {
-                    link.classList.remove('text-blue-600', 'bg-blue-50', 'dark:bg-gray-800', 'font-semibold');
-                    if (link.getAttribute('href') === `#${id}`) {
-                        link.classList.add('text-blue-600', 'bg-blue-50', 'dark:bg-gray-800', 'font-semibold');
-                    }
-                });
+    window.addEventListener('scroll', () => {
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            // Add a buffer so it activates a bit before reaching the exact section top
+            if (window.scrollY >= (sectionTop - 300)) {
+                current = section.getAttribute('id');
             }
         });
-    }, observerOptions);
 
-    sections.forEach(section => {
-        scrollSpyObserver.observe(section);
+        // Ensure "contact" is highlighted when scrolling to the very bottom
+        if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10) {
+            current = 'contact';
+        }
+
+        if (current) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+
+            mobileNavLinks.forEach(link => {
+                link.classList.remove('text-blue-600', 'bg-blue-50', 'dark:bg-gray-800', 'scale-105', 'shadow-sm');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-blue-600', 'bg-blue-50', 'dark:bg-gray-800', 'scale-105', 'shadow-sm');
+                }
+            });
+        }
     });
 });
