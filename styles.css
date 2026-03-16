@@ -53,3 +53,43 @@
     color: #bfdbfe !important; /* Tailwind blue-200 */
     text-shadow: 0 4px 6px rgba(191, 219, 254, 0.3);
 }
+
+/* --- Skill Card Hover & Glow Effects --- */
+.skill-card {
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Glow colors manually extracted from the brand logos */
+.glow-python:hover { box-shadow: 0 10px 25px -5px rgba(55, 118, 171, 0.5); border-color: rgba(55, 118, 171, 0.3); }
+.glow-cpp:hover { box-shadow: 0 10px 25px -5px rgba(0, 89, 156, 0.5); border-color: rgba(0, 89, 156, 0.3); }
+.glow-c:hover { box-shadow: 0 10px 25px -5px rgba(40, 53, 147, 0.5); border-color: rgba(40, 53, 147, 0.3); }
+.glow-js:hover { box-shadow: 0 10px 25px -5px rgba(247, 223, 30, 0.4); border-color: rgba(247, 223, 30, 0.4); } 
+.glow-html:hover { box-shadow: 0 10px 25px -5px rgba(227, 79, 38, 0.5); border-color: rgba(227, 79, 38, 0.3); }
+.glow-css:hover { box-shadow: 0 10px 25px -5px rgba(21, 114, 182, 0.5); border-color: rgba(21, 114, 182, 0.3); }
+
+.glow-django:hover { box-shadow: 0 10px 25px -5px rgba(9, 46, 32, 0.5); border-color: rgba(9, 46, 32, 0.3); }
+.dark .glow-django:hover { box-shadow: 0 10px 25px -5px rgba(68, 183, 139, 0.4); border-color: rgba(68, 183, 139, 0.4); }
+
+.glow-pytorch:hover { box-shadow: 0 10px 25px -5px rgba(238, 76, 44, 0.5); border-color: rgba(238, 76, 44, 0.3); }
+.glow-tf:hover { box-shadow: 0 10px 25px -5px rgba(255, 111, 0, 0.5); border-color: rgba(255, 111, 0, 0.3); }
+
+.glow-numpy:hover { box-shadow: 0 10px 25px -5px rgba(1, 50, 67, 0.5); border-color: rgba(1, 50, 67, 0.3); }
+.dark .glow-numpy:hover { box-shadow: 0 10px 25px -5px rgba(77, 170, 212, 0.4); border-color: rgba(77, 170, 212, 0.4); }
+
+.glow-matplotlib:hover { box-shadow: 0 10px 25px -5px rgba(17, 85, 124, 0.5); border-color: rgba(17, 85, 124, 0.3); }
+.dark .glow-matplotlib:hover { box-shadow: 0 10px 25px -5px rgba(100, 180, 230, 0.4); border-color: rgba(100, 180, 230, 0.4); }
+
+.glow-git:hover { box-shadow: 0 10px 25px -5px rgba(240, 80, 50, 0.5); border-color: rgba(240, 80, 50, 0.3); }
+
+.glow-github:hover { box-shadow: 0 10px 25px -5px rgba(24, 23, 23, 0.5); border-color: rgba(24, 23, 23, 0.3); }
+.dark .glow-github:hover { box-shadow: 0 10px 25px -5px rgba(255, 255, 255, 0.2); border-color: rgba(255, 255, 255, 0.3); }
+
+.glow-ps:hover { box-shadow: 0 10px 25px -5px rgba(49, 168, 255, 0.5); border-color: rgba(49, 168, 255, 0.3); }
+.glow-ai:hover { box-shadow: 0 10px 25px -5px rgba(255, 154, 0, 0.5); border-color: rgba(255, 154, 0, 0.3); }
+.glow-figma:hover { box-shadow: 0 10px 25px -5px rgba(242, 78, 30, 0.5); border-color: rgba(242, 78, 30, 0.3); }
+.glow-resolve:hover { box-shadow: 0 10px 25px -5px rgba(150, 150, 150, 0.5); border-color: rgba(150, 150, 150, 0.3); }
+.glow-canva:hover { box-shadow: 0 10px 25px -5px rgba(0, 196, 204, 0.5); border-color: rgba(0, 196, 204, 0.3); }
