@@ -106,6 +106,15 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // --- Initialize AOS ---
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800, // values from 0 to 3000, with step 50ms
+            once: true,    // whether animation should happen only once - while scrolling down
+            offset: 50,    // offset (in px) from the original trigger point
+        });
+    }
+
     // --- Scrollspy ---
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
