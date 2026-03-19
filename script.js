@@ -179,4 +179,57 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
     });
+
+    // --- Contact Form AJAX Submission ---
+    const contactForm = document.getElementById('contact-form');
+    const submitBtnText = document.getElementById('submit-button-text');
+    const formStatus = document.getElementById('form-status');
+
+    if (contactForm && submitBtnText && formStatus) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const originalText = submitBtnText.innerText;
+            submitBtnText.innerText = 'Sending...';
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+            
+            const data = new FormData(contactForm);
+            
+            try {
+                const response = await fetch(contactForm.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    formStatus.innerText = 'Success! Your message has been sent.';
+                    formStatus.className = 'mt-4 text-center text-sm font-medium text-green-600 dark:text-green-400 block';
+                    contactForm.reset();
+                } else {
+                    formStatus.innerText = 'Oops! There was a problem sending your message.';
+                    formStatus.className = 'mt-4 text-center text-sm font-medium text-red-600 dark:text-red-400 block';
+                }
+            } catch (error) {
+                formStatus.innerText = 'Oops! There was a problem sending your message.';
+                formStatus.className = 'mt-4 text-center text-sm font-medium text-red-600 dark:text-red-400 block';
+            } finally {
+                // Reset button state
+                submitBtnText.innerText = originalText;
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+                
+                // Hide status message after 5 seconds
+                setTimeout(() => {
+                    formStatus.classList.add('hidden');
+                    formStatus.classList.remove('block');
+                }, 5000);
+            }
+        });
+    }
 });
