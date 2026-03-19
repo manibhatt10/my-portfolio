@@ -48,6 +48,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const themeBtn = document.getElementById('theme-toggle');
 
     if (themeBtn) {
+        // Initialize aria-pressed state for accessibility
+        themeBtn.setAttribute('aria-pressed', document.documentElement.classList.contains('dark'));
+
         themeBtn.addEventListener('click', function () {
             // CSS handles rotating icons automatically via the 'dark' top-level class.
 
@@ -71,6 +74,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     localStorage.setItem('color-theme', 'dark');
                 }
             }
+
+            // Update aria-pressed state on toggle
+            themeBtn.setAttribute('aria-pressed', document.documentElement.classList.contains('dark'));
         });
     }
 
